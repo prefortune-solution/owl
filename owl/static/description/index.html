@@ -26,13 +26,21 @@
   </div>
 </section>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DC3P0JDMRY"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  (function() {
+  var gtagScript = document.createElement('script');
+  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-DC3P0JDMRY';
+  gtagScript.async = true;
+  document.head.appendChild(gtagScript);
 
-  gtag('config', 'G-DC3P0JDMRY');
+  gtagScript.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DC3P0JDMRY');
+  };
+})();
+
 </script>
 <!-- Youtube -->
 <section>
